@@ -1,0 +1,12 @@
+GET https://127.0.0.1:8000/categorie/1?toto=oui
+
+
+###
+
+
+POST https://127.0.0.1:8000/categorie/1?toto=nom
+
+Content-Type: application/x-www-form-urlencoded
+
+name=foo
+&password=bar

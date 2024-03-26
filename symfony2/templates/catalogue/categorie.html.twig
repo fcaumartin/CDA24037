@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CatalogueController!{% endblock %}
+
+{% block body %}
+
+<h1>
+    {{ categorie.nom }}
+</h1>
+{% for scat in categorie.categories %}
+    <div>
+        <a href="{{ path("app_produits", { categorie: scat.id }) }}">
+            {{ scat.nom }}
+        </a>
+    </div>
+{% else %}
+    
+{% endfor %}
+
+
+{% endblock %}

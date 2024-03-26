@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CatalogueController!{% endblock %}
+
+{% block body %}
+
+<h1>
+    {{ produit.nom }}
+</h1>
+<div>
+    {{ produit.image }}
+    {{produit.prix}}
+</div>
+
+{% endblock %}

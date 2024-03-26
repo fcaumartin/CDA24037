@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CatalogueController!{% endblock %}
+
+{% block body %}
+
+<h1>
+    {{ categorie.nom }}
+</h1>
+{% for produit in categorie.produits %}
+    <div>
+        <a href="{{ path("app_details", {produit: produit.id}) }}">
+        {{ produit.nom }}
+        </a>
+    </div>
+{% else %}
+    
+{% endfor %}
+
+
+{% endblock %}
