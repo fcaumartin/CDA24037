@@ -2,13 +2,15 @@
 
 namespace App\Controller;
 
-use App\Entity\Categorie;
 use App\Entity\Produit;
+use App\Entity\Categorie;
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\CategorieRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
+
 
 class CatalogueController extends AbstractController
 {
