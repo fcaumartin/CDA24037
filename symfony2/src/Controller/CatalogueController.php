@@ -30,11 +30,6 @@ class CatalogueController extends AbstractController
         dump ($request->query);
         dump ($request->request);
 
-        $toto= 2;
-        $toto++;
-        $toto++;
-        $titi = $toto;
-        
         // dd($categorie);
 
 
