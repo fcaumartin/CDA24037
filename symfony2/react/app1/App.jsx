@@ -1,12 +1,14 @@
 import React from 'react';
+import { HydraAdmin } from "@api-platform/admin";
 
 function App() {
 
-  console.log("test")
+  // console.log("test")
   
   return (
       <div>
-        <h3>Application React</h3>
+          <HydraAdmin entrypoint="https://127.0.0.1:8000/api/" />
+
         
       </div>
     );

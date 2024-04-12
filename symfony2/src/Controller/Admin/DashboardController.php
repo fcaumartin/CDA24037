@@ -15,7 +15,9 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
+
         return $this->render('admin/dashboard.html.twig', [
+            
         ]);
 
         // return parent::index();
@@ -43,16 +45,24 @@ class DashboardController extends AbstractDashboardController
             ->setTitle('Symfony2');
     }
 
+    // public function configureMenuItems(): iterable
+    // {
+    //     yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+    //     // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+    // }
+
     public function configureMenuItems(): iterable
     {
         return [
-
             MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
-            
+
             MenuItem::section('Catalogue'),
             MenuItem::linkToCrud('Categories', 'fa fa-tags', Categorie::class),
-            MenuItem::linkToCrud('Produits', 'fa fa-file-text', Produit::class),
-            
+            // MenuItem::linkToCrud('Blog Posts', 'fa fa-file-text', BlogPost::class),
+
+            // MenuItem::section('Users'),
+            MenuItem::linkToCrud('Produits', 'fa fa-comment', Produit::class),
+            // MenuItem::linkToCrud('Users', 'fa fa-user', User::class),
         ];
     }
 }
