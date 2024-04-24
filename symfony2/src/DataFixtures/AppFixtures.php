@@ -2,10 +2,11 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Categorie;
+use App\Entity\User;
 use App\Entity\Produit;
-use Doctrine\Bundle\FixturesBundle\Fixture;
+use App\Entity\Categorie;
 use Doctrine\Persistence\ObjectManager;
+use Doctrine\Bundle\FixturesBundle\Fixture;
 
 class AppFixtures extends Fixture
 {
@@ -77,6 +78,13 @@ class AppFixtures extends Fixture
         $manager->persist($p1);
         $manager->persist($p2);
         $manager->persist($p3);
+
+
+        $u = new User();
+        $u->setEmail("admin@admin.com");
+        $u->setPassword('$2y$13$ZjoEJkkaK2MGatogzcB6r.W2xaYIXERPntSpIuFhJs5XXqRyWhS3m');
+        
+        $manager->persist($u);
 
 
         $manager->flush();
